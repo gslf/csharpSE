@@ -1,2 +1,15 @@
 # csharpSE
-Algorithm and Data Structure in C#
+### Algorithm and Data Structures implemented in C#
+---
+
+#### Data Structures
+- Stack
+---
+
+#### Algorithm
+- ToDo
+
+---
+
+**:#/** Written by Gioele Stefano Luca Fierro and powered by promezio.
+Live long and prosper 🖖
