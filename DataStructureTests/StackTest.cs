@@ -1,5 +1,3 @@
-using DataStructure.Stack;
-
 namespace DataStructureTests {
     [TestClass]
     public class StackTest {
