@@ -1,10 +1,10 @@
 ﻿
 namespace DataStructureTests {
     [TestClass]
-    public class LinkedListTest {
+    public class DoubleLinkedListTest {
         [TestMethod]
         public void TestList() {
-            var ll = new DataStructure.LinkedList.LinkedList<int>();
+            var ll = new DataStructure.DoubleLinkedList.DoubleLinkedList<int>();
             ll.AddFirst(2);
             ll.AddFirst(1);
             ll.AddLast(4);
@@ -12,22 +12,29 @@ namespace DataStructureTests {
             ll.AddAfter(1, 3);
             ll.AddAfter(4, 6);
 
-            int[] expected = new int[]{ 1, 2, 3, 4, 5, 6};
+            int[] expected = new int[] { 1, 2, 3, 4, 5, 6 };
             int counter = 0;
             foreach (int node in ll.GetEnum()) {
-                Assert.AreEqual(expected[counter],node);
+                Assert.AreEqual(expected[counter], node);
+                counter++;
+            }
+
+            int[] revExpected = new int[] { 6, 5, 4, 3, 2, 1 };
+            counter = 0;
+            foreach (int node in ll.GetReverseEnum()) {
+                Assert.AreEqual(revExpected[counter], node);
                 counter++;
             }
 
             ll.Remove(5);
             Assert.AreEqual(5, ll.Lenght());
 
-            
+
         }
 
         [TestMethod]
         public void TestIndexErrors() {
-            var ll = new DataStructure.LinkedList.LinkedList<int>();
+            var ll = new DataStructure.DoubleLinkedList.DoubleLinkedList<int>();
 
             try {
                 ll.Remove(0);
@@ -37,7 +44,7 @@ namespace DataStructureTests {
             }
 
             try {
-                ll.AddAfter(5,1);
+                ll.AddAfter(5, 1);
                 Assert.Fail("no exception thrown");
             } catch (Exception ex) {
                 Assert.IsTrue(ex is ArgumentOutOfRangeException, ex.Message);
@@ -47,7 +54,7 @@ namespace DataStructureTests {
         [TestMethod]
         public void TestRemove() {
             // Remove from list with one element
-            var ll = new DataStructure.LinkedList.LinkedList<int>();
+            var ll = new DataStructure.DoubleLinkedList.DoubleLinkedList<int>();
             ll.AddFirst(1);
             ll.Remove(0);
             Assert.AreEqual(0, ll.Lenght());
@@ -81,9 +88,9 @@ namespace DataStructureTests {
         [TestMethod]
         public void TestAddAfter() {
             // AddAfter in a list with one element
-            var ll = new DataStructure.LinkedList.LinkedList<int>();
+            var ll = new DataStructure.DoubleLinkedList.DoubleLinkedList<int>();
             ll.AddFirst(1);
-            ll.AddAfter(0, 3);
+            ll.AddAfter(0,3);
             Assert.AreEqual(2, ll.Lenght());
 
             // AddAfter the first in list with two elements
@@ -91,7 +98,6 @@ namespace DataStructureTests {
             int[] expected = new int[] { 1, 2, 3 };
             int counter = 0;
             foreach (int node in ll.GetEnum()) {
-                Console.WriteLine(node);
                 Assert.AreEqual(expected[counter], node);
                 counter++;
             }
@@ -102,7 +108,6 @@ namespace DataStructureTests {
             ll.AddAfter(1, 3);
             counter = 0;
             foreach (int node in ll.GetEnum()) {
-                Console.WriteLine(node);
                 Assert.AreEqual(expected[counter], node);
                 counter++;
             }
