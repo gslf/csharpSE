@@ -14,14 +14,14 @@ namespace DataStructureTests {
 
             int[] expected = new int[] { 1, 2, 3, 4, 5, 6 };
             int counter = 0;
-            foreach (int node in ll.GetEnum()) {
+            foreach (int node in ll) {
                 Assert.AreEqual(expected[counter], node);
                 counter++;
             }
 
             int[] revExpected = new int[] { 6, 5, 4, 3, 2, 1 };
             counter = 0;
-            foreach (int node in ll.GetReverseEnum()) {
+            foreach (int node in ll.GetRevEnumerator()) {
                 Assert.AreEqual(revExpected[counter], node);
                 counter++;
             }
@@ -64,13 +64,13 @@ namespace DataStructureTests {
             ll.AddLast(2);
             ll.Remove(0);
             Assert.AreEqual(1, ll.Lenght());
-            Assert.AreEqual(2, ll.GetEnum().First());
+            Assert.AreEqual(2, ll.First());
 
             // Remove second from list with two elements
             ll.AddFirst(1);
             ll.Remove(1);
             Assert.AreEqual(1, ll.Lenght());
-            Assert.AreEqual(1, ll.GetEnum().First());
+            Assert.AreEqual(1, ll.First());
 
             // Remove second from list with three elements
             ll.AddLast(2);
@@ -79,7 +79,7 @@ namespace DataStructureTests {
 
             int[] expected = new int[] { 1, 3 };
             int counter = 0;
-            foreach (int node in ll.GetEnum()) {
+            foreach (int node in ll) {
                 Assert.AreEqual(expected[counter], node);
                 counter++;
             }
@@ -97,7 +97,7 @@ namespace DataStructureTests {
             ll.AddAfter(0, 2);
             int[] expected = new int[] { 1, 2, 3 };
             int counter = 0;
-            foreach (int node in ll.GetEnum()) {
+            foreach (int node in ll) {
                 Assert.AreEqual(expected[counter], node);
                 counter++;
             }
@@ -107,7 +107,7 @@ namespace DataStructureTests {
             ll.Remove(2);
             ll.AddAfter(1, 3);
             counter = 0;
-            foreach (int node in ll.GetEnum()) {
+            foreach (int node in ll) {
                 Assert.AreEqual(expected[counter], node);
                 counter++;
             }
