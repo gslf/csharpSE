@@ -6,8 +6,6 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-// TODO: Review LinkedList Comments
-
 namespace DataStructure.LinkedList {
 
     /// <summary>
