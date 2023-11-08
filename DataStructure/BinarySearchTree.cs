@@ -9,8 +9,6 @@ using System.Threading.Tasks;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 
-// TODO: Review BinarySearchTree Comments
-
 namespace DataStructure.BinarySearchTree {
 
     /// <summary>
