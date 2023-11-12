@@ -155,7 +155,7 @@ namespace DataStructure.DoubleLinkedList {
 
         /// <summary>
         /// Remove an item from the list
-        /// <param name="position">The item to add</param>
+        /// <param name="position">The item to remove</param>
         /// <exception cref="ArgumentOutOfRangeException">When the position parameter is out of range.</exception>
         /// </summary>
         public void Remove(int position) {
