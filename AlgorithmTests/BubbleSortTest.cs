@@ -3,7 +3,7 @@ using Algorithm.BubbleSort;
 
 namespace AlgorithmTests {
     [TestClass]
-    public class BubbleSortTests {
+    public class BubbleSortTest {
         [TestMethod]
         public void TestIntList() {
             var list = new List<int> { 5, 3, 8, 4, 1 };
