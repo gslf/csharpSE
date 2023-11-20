@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Algorithm.InsertionSort {
-    public class InsertionSort {
+    public class InsertionSort<T> where T : IComparable {
 
         /// <summary>
         /// Insertion Sort is an algorithm that incrementally 
