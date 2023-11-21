@@ -17,11 +17,15 @@ I have created a well-commented and documented collection of data structures and
 
 ---
 
-#### Algorithm
+#### Sorting Algorithms
 - BubbleSort
 - InsertionSort
 - MergeSort
 - QuickSort
+
+### Other Algorithms
+- Recursion with memoization
+-
 
 ---
 
