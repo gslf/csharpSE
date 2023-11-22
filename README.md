@@ -25,7 +25,7 @@ I have created a well-commented and documented collection of data structures and
 
 ### Other Algorithms
 - Recursion with memoization
--
+- Subsequence Problem
 
 ---
 
