@@ -27,6 +27,7 @@ I have created a well-commented and documented collection of data structures and
 - Recursion with memoization
 - Subsequence Problem
 - Pruning
+- DijkstraShortestPath
 
 ---
 
